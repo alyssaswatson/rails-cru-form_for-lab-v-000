@@ -11,7 +11,11 @@ class GenresController < ApplicationController
    @genre = Genre.new(genre_params)
    @genre.save
    redirect_to artist_path(@genre)
-end
+ end
+
+  def edit
+    @genre = Genre.find_by(params[:id])
+  end
 
 
 private
