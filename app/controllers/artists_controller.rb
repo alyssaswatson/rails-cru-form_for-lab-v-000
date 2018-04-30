@@ -4,7 +4,6 @@ class ArtistsController < ApplicationController
 	end
 
 	def show
-		raise.inspection
 		@artist = Artist.find(params[:id])
 	end
 
